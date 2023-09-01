@@ -70,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body
+
         className={cn(
           Satoshi.className,
           'items-center flex flex-col sticky',
@@ -83,6 +84,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <SiteFooter />
           </main>
         </ThemeProvider>
+
+     
+       
       </body>
     </html>
   )

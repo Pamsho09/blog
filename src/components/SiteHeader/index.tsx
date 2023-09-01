@@ -5,10 +5,7 @@ import { ThemeToggle } from './ThemeToggle'
 
 const Index = () => {
   const routes = [
-    {
-      name: 'Home',
-      path: '/',
-    },
+   
     {
       name: 'Blog',
       path: '/blog',
