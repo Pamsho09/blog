@@ -21,7 +21,7 @@ export default function RootLayout({
       >
         <main className="w-full sm:w-9/12   sticky flex flex-col  h-screen ">
           <SiteHeader />
-          <div className="w-full flex flex-col flex-1  gap-3 h-auto px-8">
+          <div className="w-full flex flex-col flex-1  gap-3 h-auto ">
             {children}
           </div>
           <SiteFooter />
