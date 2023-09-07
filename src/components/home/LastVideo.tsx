@@ -5,54 +5,7 @@ import React from "react";
 const LastVideo = async () => {
   const listVideos = await getLatestYoutubeVideos();
   console.log(listVideos);
-  const lastVideo = {
-    kind: "youtube#playlistItem",
-    etag: "FOmwT53F3KxFNXtXxHuj5bAyk8M",
-    id: "UExnbmc1YmNYZnMxMDBQMzUxcm1WejQ3VWxsQ2huVUlDSi4wOTA3OTZBNzVEMTUzOTMy",
-    snippet: {
-      publishedAt: "2023-08-29T03:31:58Z",
-      channelId: "UCulkBMcVUrTxmWIhlevaUiw",
-      title: "Cómo Dominaría la Programación si Pudiera Empezar de Nuevo 💻🔥",
-      description:
-        "Trazando un nuevo rumbo en mi viaje de programación. 💻💡 Si tuviera la oportunidad de empezar de nuevo, estos son los pasos que seguiría para convertirme en un maestro del código. 🚀👨‍💻 \n#programacion ón #DesarrolloDeSoftware #Aprendizaje #ConsejosDeProgramación #Reinicio #CódigoCreativo",
-      thumbnails: {
-        default: {
-          url: "https://i.ytimg.com/vi/oqfyuJxx6Do/default.jpg",
-          width: 120,
-          height: 90,
-        },
-        medium: {
-          url: "https://i.ytimg.com/vi/oqfyuJxx6Do/mqdefault.jpg",
-          width: 320,
-          height: 180,
-        },
-        high: {
-          url: "https://i.ytimg.com/vi/oqfyuJxx6Do/hqdefault.jpg",
-          width: 480,
-          height: 360,
-        },
-        standard: {
-          url: "https://i.ytimg.com/vi/oqfyuJxx6Do/sddefault.jpg",
-          width: 640,
-          height: 480,
-        },
-        maxres: {
-          url: "https://i.ytimg.com/vi/oqfyuJxx6Do/maxresdefault.jpg",
-          width: 1280,
-          height: 720,
-        },
-      },
-      channelTitle: "Pamsho",
-      playlistId: "PLgng5bcXfs100P351rmVz47UllChnUICJ",
-      position: 4,
-      resourceId: {
-        kind: "youtube#video",
-        videoId: "oqfyuJxx6Do",
-      },
-      videoOwnerChannelTitle: "Pamsho",
-      videoOwnerChannelId: "UCulkBMcVUrTxmWIhlevaUiw",
-    },
-  };
+  const lastVideo = listVideos[listVideos.length - 1];
   console.log(LastVideo);
   return (
     <aside
@@ -71,7 +24,8 @@ const LastVideo = async () => {
           src={lastVideo.snippet.thumbnails.standard.url}
           width={lastVideo.snippet.thumbnails.standard.width}
           height={lastVideo.snippet.thumbnails.standard.height}
-          className=" w-full"
+          className="w-full h-full"
+        
           alt="Last video"
         />
       </a>

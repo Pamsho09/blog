@@ -5,6 +5,7 @@ import TextAnimation from "@/components/home/TextAnimation";
 import TiktokMain from "@/components/home/TiktokMain";
 import TwitchMain from "@/components/home/TwitchMain";
 import { Button } from "@/components/ui/button";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -20,7 +21,6 @@ export default async function Home() {
 
   return (
     <>
-      <div className="w-full h-16 md:hidden"></div>
       <TwitchMain isLive={isLive} host={host} />
       <section className="w-full mb-4 flex-col-reverse  md:flex-row  justify-center md:items-center flex  items-start gap-10">
         <BlogMain />
