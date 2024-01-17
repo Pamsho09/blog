@@ -18,7 +18,6 @@ function Login() {
   const login = async () => {
     await signIn("credentials", {
       ...user,
-      redirect: true,
       callbackUrl: "/kitchen/admin",
     });
   };
